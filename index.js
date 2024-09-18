@@ -6,7 +6,7 @@ const args = process.argv.slice(2);
 const length = 8;
 let includeNumbers = false;
 let includeUppercase = false;
-let includeSymbols = false;
+
 
 //Generating the user password
 
@@ -15,4 +15,4 @@ const genPassword = (length,includeNumbers,includeUppercase,includeSymbols)
 const lowercase = 'abcdefghijklmnopqrstuvwxyz';
 const numbers = '123456789';
 const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const symbols = '!@#$%^&*()_+{}[]|;:,.<>?';
+
