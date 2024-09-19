@@ -4,7 +4,7 @@ const args = process.argv.slice(2);
 
 //Setting the default value for the user
 let length = 8
-let useNumbers = false, useCapitals = false, useSymbols = false;let useNumbers = false, useCapitals = false;
+let useNumbers = false, useCapitals = false;
 //Actually generating a password
 
 const generatePassword = (length, useNumbers, useCapitals) => {
