@@ -2,12 +2,12 @@
   "name": "password-generator",
   "version": "1.0.0",
   "description": "A simple CLI for generating passwords",
-  "main": "bin/password-gen.js",
+  "main": "bin/index.js",
   "bin": {
-    "password-gen": "./bin/password-gen.js"
+    "password-gen": "./bin/index.js"
   },
   "author": "Your Name",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "commander": "^9.4.0"
   }
