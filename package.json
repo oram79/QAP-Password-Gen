@@ -1,14 +1,14 @@
 {
   "name": "password-generator",
   "version": "1.0.0",
-  "description": "A Basic CLI Password Generator",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "A simple CLI for generating passwords",
+  "main": "bin/password-gen.js",
   "bin": {
-    "password-gen": "./index.js"
+    "password-gen": "./bin/password-gen.js"
   },
-  "author": "Logan Oram",
-  "license": "MIT"
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.4.0"
+  }
 }
