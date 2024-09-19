@@ -4,10 +4,10 @@ This is a simple command-line password generator built with Node.js. You can gen
 
 ## Features
 
-- **--length -l Customizable password length**: Specify the length of the password.
-- **--numbers -n Use of numbers**: Option to include numbers in the password.
-- **--capitals -c Use of capital letters**: Option to include uppercase letters in the password.
-- **--symbols -s Use of symbols**: Option to include special characters (e.g., `!@#$%^&*()`).
+- **Customizable password length**: Specify the length of the password.
+- **of numbers**: Option to include numbers in the password.
+- **Use of capital letters**: Option to include uppercase letters in the password.
+- **Use of symbols**: Option to include special characters (e.g., `!@#$%^&*()`).
 
 ## Installation
 
