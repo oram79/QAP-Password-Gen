@@ -71,3 +71,7 @@ const displayHelp = () => {
   `);
     process.exit(0);
   };
+
+  ///making password and displaying it in console.log
+  const password = generatePassword(length, useNumbers,useCapitals);
+  console.log(`Generated User Password: ${password}`);
