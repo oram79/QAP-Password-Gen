@@ -2,43 +2,47 @@
 
 const args = process.argv.slice(2);
 
-// Setting the default value for the user
+// Setting The Default Value For The User
 let length = 8;
-let useNumbers = false, useCapitals = false;
+let useNumbers = false, useCapitals = false, useSymbols = false;
 
-// Function to display help/usage information
+// Function To Display Help/Usage Information
 const displayHelp = () => {
   console.log(`
-  Usage: QAP-Password-Gen [options]
 
-  Options:
-    --help, -h          Display this help message
-    --length, -l        Set the desired password length (default: 8)
-    --numbers, -n       Add numbers to the generated password
-    --capitals, -c      Include uppercase letters in the password
+Help Menu For Password Generator:
 
-  Example(s):
+    --help, -h       [ Display this help message ]
+    --length, -l     [ Set the desired password length (default: 8) ]
+    --numbers, -n    [ Add numbers to the generated password ]
+    --capitals, -c   [ Include uppercase letters in the password ]
+    --symbols, -s    [ Include Symbols in the password ]
+  
+List Of Example(s) To Use For Passwords
     node index --length 12 --numbers --capitals
     node index --length 28 --capitals
+    node index --length 15 --numbers --capitals --symbols
   `);
   process.exit(0);
 };
 
-// Actually generating a password
-const generatePassword = (length, useNumbers, useCapitals) => {
+// Actually Generating A Password
+const generatePassword = (length, useNumbers, useCapitals, useSymbols) => {
   const letters = "abcdefghijklmnopqrstuvwxyz";
   const numbers = "0123456789";
   const capitals = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const symbols = "!@#$%^&*()_+";
 
-  // Setting values
+  // Setting Values
   let characters = letters;
   if (useNumbers) characters += numbers;
   if (useCapitals) characters += capitals;
+  if (useSymbols) characters += symbols
 
   return Array.from({ length }, () => characters[Math.floor(Math.random() * characters.length)]).join('');
 };
 
-// Setting up the command-line arguments
+// Setting Up The Command Line Flags
 for (let i = 0; i < args.length; i++) {
   const arg = args[i];
   switch (arg) {
@@ -66,12 +70,17 @@ for (let i = 0; i < args.length; i++) {
       useCapitals = true;
       break;
 
+    case "--symbols":
+    case "-n":
+      useSymbols = true;
+      break;
+
     default:
       console.error(`Error: Unknown option '${arg}'`);
       displayHelp();
   }
 }
 
-// Generate password and display it
-const password = generatePassword(length, useNumbers, useCapitals);
+// Generate Password And Display It
+const password = generatePassword(length, useNumbers, useCapitals, useSymbols);
 console.log(`Generated User Password: ${password}`);
