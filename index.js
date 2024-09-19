@@ -52,3 +52,22 @@ for (let i = 0; i < args.length; i++) {
             displayHelp();
     }
 }
+
+// Function to display help/usage information
+const displayHelp = () => {
+    console.log(`
+  Usage: QAP-Password-Gen [options]
+  
+  Options:
+    --help, -h          Display this help message
+    --length, -l        Set the desired password length (default: 8)
+    --numbers, -n       Add numbers to the generated password
+    --capitals, -c      Include uppercase letters in the password
+    --symbols, -s       Add special characters to the password
+  
+  Example(s):
+    password-generator-cli --length 12 --numbers --symbols
+    password-generator-cli --symbols --capitals
+  `);
+    process.exit(0);
+  };
